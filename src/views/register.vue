@@ -45,7 +45,7 @@
   import { encryption } from '../utils/my-crypto-js'
   // import AES from 'crypto-js/aes'
   import md5 from 'crypto-js/md5'
-  //import AES from 'crypto-js/aes'
+  // import AES from 'crypto-js/aes'
   // import MD5 from 'crypto-js/md5'
   // import {encryption} from '../utils/my-crypto-js'
   export default {
@@ -112,7 +112,7 @@
           Toast('请输入密码')
         } else if (!pattern.test(this.loginPassword)) {
           this.Flag = false
-            Toast('请输入6-18位字母＋数字组合')
+          Toast('请输入6-18位字母＋数字组合')
         }
       },
       vloginPassword2 () {
@@ -137,7 +137,7 @@
         for (let i = 0; i < l; i++) {
           this.identifyCode += this.identifyCodes[this.randomNum(0, this.identifyCodes.length)]
         }
-        console.log(this.identifyCode)
+        // console.log(this.identifyCode)
       },
       MayaRegister () {
 //         判断浏览器内核类型
@@ -159,7 +159,7 @@
           }(),
           language: (navigator.browserLanguage || navigator.language).toLowerCase()
         }
-        console.log(browser)
+        // console.log(browser)
         const browsers = function () { // 判断注册方式（待确定）
            if (browser.versions.mobile) { // 判断是否是移动设备打开。browser代码在下面
              var ua = navigator.userAgent.toLowerCase();// 获取判断用的对象
@@ -189,7 +189,7 @@
            }
         }
         const registeTypes = browsers()
-        console.log(browsers())
+      //  console.log(browsers())
        const datar = {
           mobilePhone: this.mobilePhone,
             loginPassword: this.loginPassword,
@@ -199,7 +199,7 @@
             registeSource: '123456'
         }
         // 加密（需要先加载lib/aes/aes.min.js文件）
-        console.log(JSON.stringify(datar));
+       // console.log(JSON.stringify(datar));
         var en2 = encryption(JSON.stringify(datar));
         console.log(en2.toString());
         var AfterEncryption = en2.ciphertext.toString().toUpperCase();
@@ -216,7 +216,7 @@
         const signsi = params + "b2693d9c2124f3ca9547b897794ac6a1"
         const dataSifn = md5(signsi);// MD5加密
         const uData = params + "&" + "sign=" + dataSifn
-        console.log(uData)
+       // console.log(uData)
         axios.post(api.register, uData)
           .then(res => {
             console.log(res.data)
@@ -264,11 +264,11 @@
           type : 1
         }
         // aes 加密
-        console.log(JSON.stringify(phoneData));
+      //  console.log(JSON.stringify(phoneData));
         let phoneDatas = encryption(JSON.stringify(phoneData));
-        console.log(phoneDatas.toString());
+      //  console.log(phoneDatas.toString());
         let AfterEncryption = phoneDatas.ciphertext.toString().toUpperCase();
-        console.log(AfterEncryption)// 加密后的串
+      //  console.log(AfterEncryption)// 加密后的串
         // 签名
         let signature = "data=" + AfterEncryption + '&' + "timeStamp=" + timeStamp + "&" + "version=" + version
         const ph = signature + "b2693d9c2124f3ca9547b897794ac6a1"

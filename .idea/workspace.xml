@@ -2,46 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="324dc448-52a7-4c08-838e-425ed75cec50" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.bin/babylon" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.bin/babylon" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.bin/browserslist" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.bin/browserslist" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.bin/cssesc" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.bin/cssesc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.bin/csso" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.bin/csso" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.bin/errno" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.bin/errno" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.bin/eslint" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.bin/eslint" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.bin/esparse" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.bin/esparse" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.bin/esvalidate" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.bin/esvalidate" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.bin/he" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.bin/he" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.bin/html-minifier" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.bin/html-minifier" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.bin/import-local-fixture" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.bin/import-local-fixture" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.bin/internal-ip" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.bin/internal-ip" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.bin/js-yaml" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.bin/js-yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.bin/jsesc" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.bin/jsesc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.bin/json5" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.bin/json5" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.bin/loose-envify" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.bin/loose-envify" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.bin/miller-rabin" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.bin/miller-rabin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.bin/mime" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.bin/mime" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.bin/mkdirp" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.bin/mkdirp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.bin/multicast-dns" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.bin/multicast-dns" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.bin/opener" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.bin/opener" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.bin/prettier" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.bin/prettier" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.bin/regjsparser" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.bin/regjsparser" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.bin/rimraf" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.bin/rimraf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.bin/semver" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.bin/semver" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.bin/sha.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.bin/sha.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.bin/shjs" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.bin/shjs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.bin/strip-indent" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.bin/strip-indent" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.bin/svgo" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.bin/svgo" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.bin/uglifyjs" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.bin/uglifyjs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.bin/uuid" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.bin/uuid" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.bin/webpack" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.bin/webpack" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.bin/webpack-bundle-analyzer" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.bin/webpack-bundle-analyzer" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.bin/webpack-dev-server" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.bin/webpack-dev-server" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.bin/which" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.bin/which" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/forgetpsd.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/forgetpsd.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/login.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/login.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/register.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/register.vue" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -76,10 +39,11 @@
       <file leaf-file-name="register.vue" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/views/register.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1476">
-              <caret line="41" column="35" selection-start-line="41" selection-start-column="2" selection-end-line="41" selection-end-column="35" />
+            <state relative-caret-position="396">
+              <caret line="302" column="3" lean-forward="true" selection-start-line="302" selection-start-column="3" selection-end-line="302" selection-end-column="3" />
               <folding>
                 <element signature="e#1513#1551#0" expanded="true" />
+                <element signature="e#1644#1680#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -96,14 +60,18 @@
       </file>
       <file leaf-file-name="personal.vue" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/views/personal.vue">
-          <provider selected="true" editor-type-id="text-editor" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret selection-end-line="1" />
+            </state>
+          </provider>
         </entry>
       </file>
       <file leaf-file-name="login.vue" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/views/login.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="504">
-              <caret line="76" column="9" selection-start-line="70" selection-start-column="8" selection-end-line="76" selection-end-column="9" />
+            <state relative-caret-position="1224">
+              <caret line="60" column="11" selection-start-line="60" selection-start-column="11" selection-end-line="60" selection-end-column="11" />
             </state>
           </provider>
         </entry>
@@ -116,8 +84,8 @@
       <file leaf-file-name="forgetpsd.vue" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/views/forgetpsd.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="439">
-              <caret line="101" column="16" lean-forward="true" selection-start-line="101" selection-start-column="16" selection-end-line="101" selection-end-column="16" />
+            <state relative-caret-position="-425">
+              <caret line="167" column="8" selection-start-line="167" selection-start-column="8" selection-end-line="167" selection-end-column="8" />
             </state>
           </provider>
         </entry>
@@ -189,18 +157,18 @@
       <list>
         <option value="$PROJECT_DIR$/src/main.js" />
         <option value="$PROJECT_DIR$/src/api/loginByCode.js" />
-        <option value="$PROJECT_DIR$/src/views/register.vue" />
         <option value="$PROJECT_DIR$/src/views/tiedcard.vue" />
         <option value="$PROJECT_DIR$/src/utils/my-crypto-js.js" />
         <option value="$PROJECT_DIR$/src/views/DownloadPrompt.vue" />
         <option value="$PROJECT_DIR$/src/views/downloadPrompt.vue" />
-        <option value="$PROJECT_DIR$/src/views/login.vue" />
         <option value="$PROJECT_DIR$/build/webpack.dev.conf.js" />
         <option value="$PROJECT_DIR$/build/webpack.base.conf.js" />
         <option value="$PROJECT_DIR$/config/index.js" />
         <option value="$PROJECT_DIR$/server.js" />
         <option value="$PROJECT_DIR$/src/router/index.js" />
         <option value="$PROJECT_DIR$/src/api/index.js" />
+        <option value="$PROJECT_DIR$/src/views/login.vue" />
+        <option value="$PROJECT_DIR$/src/views/register.vue" />
         <option value="$PROJECT_DIR$/src/views/forgetpsd.vue" />
       </list>
     </option>
@@ -250,12 +218,6 @@
               <item name="maya" type="b2602c69:ProjectViewProjectNode" />
               <item name="maya" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="maya" type="b2602c69:ProjectViewProjectNode" />
-              <item name="maya" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="api" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="maya" type="b2602c69:ProjectViewProjectNode" />
@@ -322,12 +284,12 @@
       <workItem from="1527125171444" duration="18976000" />
       <workItem from="1527156892752" duration="8000" />
       <workItem from="1527210573815" duration="776000" />
-      <workItem from="1527495626327" duration="1862000" />
+      <workItem from="1527495626327" duration="2605000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="136661000" />
+    <option name="totallyTimeSpent" value="137404000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="3" y="0" width="1893" height="1047" extended-state="0" />
@@ -422,6 +384,7 @@
           <caret line="210" column="19" selection-start-line="210" selection-start-column="14" selection-end-line="210" selection-end-column="19" />
           <folding>
             <element signature="e#1513#1551#0" expanded="true" />
+            <element signature="e#1644#1680#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -474,6 +437,7 @@
           <caret line="246" column="21" selection-start-line="246" selection-start-column="21" selection-end-line="246" selection-end-column="21" />
           <folding>
             <element signature="e#1513#1551#0" expanded="true" />
+            <element signature="e#1644#1680#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -675,29 +639,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/views/register.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1476">
-          <caret line="41" column="35" selection-start-line="41" selection-start-column="2" selection-end-line="41" selection-end-column="35" />
-          <folding>
-            <element signature="e#1513#1551#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/views/tiedcard.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1224">
-          <caret line="42" column="35" selection-start-line="42" selection-start-column="35" selection-end-line="42" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/views/personal.vue">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/views/index.vue">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/router/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="336">
@@ -717,15 +658,43 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/views/login.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="76" column="9" selection-start-line="70" selection-start-column="8" selection-end-line="76" selection-end-column="9" />
+        <state relative-caret-position="1224">
+          <caret line="60" column="11" selection-start-line="60" selection-start-column="11" selection-end-line="60" selection-end-column="11" />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/register.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="302" column="3" lean-forward="true" selection-start-line="302" selection-start-column="3" selection-end-line="302" selection-end-column="3" />
+          <folding>
+            <element signature="e#1513#1551#0" expanded="true" />
+            <element signature="e#1644#1680#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/tiedcard.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1224">
+          <caret line="42" column="35" selection-start-line="42" selection-start-column="35" selection-end-line="42" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/personal.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/index.vue">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/views/forgetpsd.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="439">
-          <caret line="101" column="16" lean-forward="true" selection-start-line="101" selection-start-column="16" selection-end-line="101" selection-end-column="16" />
+        <state relative-caret-position="-425">
+          <caret line="167" column="8" selection-start-line="167" selection-start-column="8" selection-end-line="167" selection-end-column="8" />
         </state>
       </provider>
     </entry>

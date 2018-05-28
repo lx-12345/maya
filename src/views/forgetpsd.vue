@@ -79,7 +79,7 @@
         for (let i = 0; i < l; i++) {
           this.identifyCode += this.identifyCodes[this.randomNum(0, this.identifyCodes.length)]
         }
-        console.log(this.identifyCode)
+       // console.log(this.identifyCode)
       },
       onSubmit () {
         const myreg = /^[1][3,4,5,7,8][0-9]{9}$/;
@@ -112,13 +112,13 @@
         // aes加密
         let phoneDatas = encryption(JSON.stringify(data));
         let AfterEncryption = phoneDatas.ciphertext.toString().toUpperCase();
-        console.log(AfterEncryption)// 加密后的串
+      //  console.log(AfterEncryption)// 加密后的串
         // 签名 (传到后台的数据 = (加密后的data+时间戳 + 版本号) +"&" + 'sign=' + md5((加密后的data+时间戳 + 版本号)+key)  )
         let signature = 'data=' + AfterEncryption + '&' + 'timeStamp=' + this.timeStamp + '&' + 'version=' + this.version
         const ph = signature + 'b2693d9c2124f3ca9547b897794ac6a1'
         let md5Data = md5(ph)
         let upData = signature + '&' + 'sign=' + md5Data
-        console.log(upData)
+      //  console.log(upData)
         axios.post(api.forgetpsd, upData)
           .then(res => {
             console.log(res.data)
@@ -165,9 +165,9 @@
           type: this.type
         }
         // 加密（需要先加载lib/aes/aes.min.js文件）
-        console.log(JSON.stringify(data));
+      //  console.log(JSON.stringify(data));
         var en2 = encryption(JSON.stringify(data));
-        console.log(en2.toString());
+      //  console.log(en2.toString());
         var AfterEncryption = en2.ciphertext.toString().toUpperCase();
         // 签名
         let signature = "data=" + AfterEncryption + '&' + "type=" + this.type + '&' + "version=" + this.version

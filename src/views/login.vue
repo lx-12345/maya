@@ -58,11 +58,11 @@
             loginPassword: this.loginPassword
         };
         // aes 加密
-        console.log(JSON.stringify(data));
+        // console.log(JSON.stringify(data));
         let phoneDatas = encryption(JSON.stringify(data));
         let AfterEncryption = phoneDatas.ciphertext.toString().toUpperCase();
-        console.log(AfterEncryption)// 加密后的串
-        console.log(AfterEncryption)
+        // console.log(AfterEncryption)// 加密后的串
+       // console.log(AfterEncryption)
         // 签名 (传到后台的数据 = (加密后的data+时间戳 + 版本号) +"&" + 'sign=' + md5((加密后的data+时间戳 + 版本号)+key)  )
         let signatureObj = 'data=' + AfterEncryption + '&' + 'timeStamp=' + '2018-01-25 12:32:21' + '&' + 'version=' + api.version
         const signsi = signatureObj + 'b2693d9c2124f3ca9547b897794ac6a1'
@@ -83,7 +83,7 @@
           } else {
             axios.post(api.login, uData)
               .then(res => {
-                console.log(res)
+                // console.log(res)
                 if (res.status === 200) {
                   const result = res.data
                   if (result.result_code === '200') {
@@ -106,10 +106,7 @@
             return true
           }
         }
-        // if (!this.loginName || !this.loginPassword) {
-        //   return
-        // }
-        },
+      },
       changeStyle () {
         if (this.loginPassword && this.loginName) {
           this.gradient = 'gradient'
