@@ -1,0 +1,31 @@
+html{
+  font-size: 100px;
+}
+body{
+  width: 100%;
+  max-width: 750px;
+  margin: 0 auto;font-size: 1.4rem;}
+input{
+  font-size: 0.28rem;}
+.gradient{
+   background: -moz-linear-gradient(left, #c155ee 0%, #9857fc 100%)!important;
+   background: -webkit-gradient(linear, top left, top right, color-stop(0%,#c155ee), color-stop(100%,#9857fc))!important;
+   background: -webkit-linear-gradient(left, #c155ee 0%,#9857fc 100%)!important;
+   background: -o-linear-gradient(left, #c155ee 0%,#9857fc 100%)!important;
+   background: -ms-linear-gradient(left, #c155ee 0%,#9857fc 100%)!important;
+   background: linear-gradient(to right, #c155ee 0%,#9857fc 100%)!important;
+ }
+.gradient2{
+  background: -moz-linear-gradient(left, #602a77 0%, #4c2b7e 100%);
+  background: -webkit-gradient(linear, top left, top right, color-stop(0%,#602a77), color-stop(100%,#4c2b7e));
+  background: -webkit-linear-gradient(left, #602a77 0%,#4c2b7e 100%);
+  background: -o-linear-gradient(left, #602a77 0%,#4c2b7e 100%);
+  background: -ms-linear-gradient(left, #602a77 0%,#4c2b7e 100%);
+  background: linear-gradient(to right, #602a77 0%,#4c2b7e 100%);
+}
+.maya-m-icon{background: url("../image/maya-icon.png") no-repeat; background-size: 2rem 2rem;}
+.maya-center-middle{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform:translateX(-50%) translateY(-50%);}
