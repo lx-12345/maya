@@ -26,7 +26,7 @@
         <label>确认新密码</label><input type="password" placeholder="请再一次输入新密码" value="" v-model="newloginPassword2" @keyup='changeStyle'/>
       </div>
     </section>
-    <mt-button type="primary" class="maya-btn" :class='gradient' @click="MayaRegister">提交</mt-button>
+    <mt-button type="primary" class="maya-btn" :class='gradient' @click="onSubmit">提交</mt-button>
   </div>
 </template>
 
@@ -81,6 +81,28 @@
         }
         console.log(this.identifyCode)
       },
+      onSubmit () {
+        const myreg = /^[1][3,4,5,7,8][0-9]{9}$/;
+        const loginPass = /^(?![0-9]+$)(?![a-zA-Z]+$)[0-9A-Za-z]{6,18}$/;
+        let mobilePhone = this.mobilePhone
+        let newloginPassword = this.newloginPassword
+        if (!myreg.test(mobilePhone)) {
+          Toast({
+            showClose: true,
+            message: '请输入正确的手机号',
+            type: 'success'
+          })
+          return false;
+        } else if (!loginPass.test(newloginPassword)) {
+          Toast({
+            showClose: true,
+            message: '请输入6到18位数字和字母组成',
+            type: 'success'
+          })
+        } else {
+          this.MayaRegister()
+        }
+      },
       MayaRegister () { // 提交
         let data = {
           loginName : this.mobilePhone, // 手机号
@@ -105,10 +127,9 @@
               message: '修改密码成功',
               type: 'success'
             })
-            window.location.href = 'login'
+            window.location.href = '/'
           }).catch(err => {
           alert(err)
-
         })
       },
       changeStyle () { // 两次密码一致性验证
