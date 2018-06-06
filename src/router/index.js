@@ -8,6 +8,8 @@ const Register = resolve => require(['../views/register.vue'], resolve)
 const ForgetPassword = resolve => require(['../views/forgetpsd.vue'], resolve)
 const TiedCard = resolve => require(['../views/tiedcard.vue'], resolve)
 const DownloadPrompt = resolve => require(['../views/downloadPrompt.vue'], resolve)
+const login2 = resolve => require(['../views/login2.vue'], resolve)
+
 export default new Router({
   mode: 'history',
   routes: [
@@ -17,7 +19,7 @@ export default new Router({
       component: Index
     },
     {
-      path: '/',
+      path: '/login',
       name: 'login',
       component: Login
     },
@@ -40,6 +42,11 @@ export default new Router({
       path: '/downloadPrompt',
       name: 'downloadPrompt',
       component: DownloadPrompt
+    },
+    {
+      path: '/',
+      name: 'login2',
+      component: login2
     }
   ]
 })

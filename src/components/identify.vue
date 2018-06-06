@@ -21,11 +21,11 @@
       },
       backgroundColorMin: {
         type: Number,
-        default: 180
+        default: 255
       },
       backgroundColorMax: {
         type: Number,
-        default: 240
+        default: 255
       },
       colorMin: {
         type: Number,
@@ -53,7 +53,7 @@
       },
       contentWidth: {
         type: Number,
-        default: 98
+        default: 80
       },
       contentHeight: {
         type: Number,
@@ -79,6 +79,11 @@
         // 绘制背景
         ctx.fillStyle = this.randomColor(this.backgroundColorMin, this.backgroundColorMax)
         ctx.fillRect(0, 0, this.contentWidth, this.contentHeight)
+        // 绘制边框
+        ctx.strokeStyle= "#f88125";
+        ctx.lineWidth=2;
+        ctx.rect(0, 0, 80, 34);
+        ctx.stroke();
         // 绘制文字
         for (let i = 0; i < this.identifyCode.length; i++) {
           this.drawText(ctx, this.identifyCode[i], i)
@@ -112,12 +117,12 @@
       },
       drawDot (ctx) {
         // 绘制干扰点
-        for (let i = 0; i < 50; i++) {
-          ctx.fillStyle = this.randomColor(0, 255)
-          ctx.beginPath()
-          ctx.arc(this.randomNum(0, this.contentWidth), this.randomNum(0, this.contentHeight), 1, 0, 2 * Math.PI)
-          ctx.fill()
-        }
+        // for (let i = 0; i < 50; i++) {
+        //   ctx.fillStyle = this.randomColor(0, 255)
+        //   ctx.beginPath()
+        //   ctx.arc(this.randomNum(0, this.contentWidth), this.randomNum(0, this.contentHeight), 1, 0, 2 * Math.PI)
+        //   ctx.fill()
+        // }
       }
     },
     watch: {

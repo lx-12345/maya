@@ -1,3 +1,4 @@
+<!--二维码下载-->
 <template>
   <div class="maya-bg">
     <div class="maya-logo">
@@ -5,8 +6,8 @@
     </div>
     <div class="QR-code">
       <div class="Android-code">
-        <div class="QR-code-icon">
-          <img src="../assets/image/code.png" alt="">
+        <div class="QR-code-icon" id="qrcode">
+          <!--<img src="../assets/image/code.png" alt="">-->
         </div>
         <p>手机扫描二维码下载</p>
         <img height="16px" src="../assets/image/Android.png" alt="">
@@ -15,8 +16,8 @@
         </div>
       </div>
       <div class="IOS-code">
-        <div class="QR-code-icon">
-          <img src="../assets/image/code.png" alt="">
+        <div class="QR-code-icon" id="qrcode2">
+          <!--<img src="../assets/image/code.png" alt="">-->
         </div>
         <p>手机扫描二维码下载</p>
         <img height="16px" src="../assets/image/IOS.png" alt="">
@@ -30,11 +31,35 @@
 </template>
 
 <script>
-    export default {
-        data () {
+//	import QRCode from '../../common/js/qrcode.js'
+	import QRCode from '../utils/qrcode'
+	export default {
+		data(){
+			return{
+				text:'www.baidu.com',
+				text2:'56663159'
+			}
+		},
+	   mounted() {
+        this.qrcode(qrcode,this.text)
+        this.qrcode(qrcode2,this.text2)
+    },
 
-        }
+    methods: {
+      qrcode (obg,text) {
+	      let qrcode = new QRCode(obg, {
+	        width: 100,
+	        height: 100, // 高度
+	        text: text // 二维码内容
+	        // render: 'canvas' // 设置渲染方式（有两种方式 table和canvas，默认是canvas）
+	        // background: '#f0f'
+	        // foreground: '#ff0'
+	      })
+	      console.log(qrcode)
+		  }
+
     }
+	}
 </script>
 
 <style scoped>
@@ -55,7 +80,6 @@
     justify-content: space-around;
   }
   .Android-code,.IOS-code{
-    width: 36%;
     background-color: #fff;
     border-radius: 5px;
   }

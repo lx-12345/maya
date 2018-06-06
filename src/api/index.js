@@ -1,4 +1,4 @@
-const baseURL = 'https://47.105.33.225:8088'
+const baseURL = 'https://192.168.0.205:8088'
 // const baseURL = "https://pre-www.huiyuntong.com/app/login/"  //测试环境
 const api = {
   register: baseURL + '/siteuser/v1/register', // 注册接口
