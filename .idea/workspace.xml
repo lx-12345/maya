@@ -1,17 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="324dc448-52a7-4c08-838e-425ed75cec50" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/assets/image/footer-bg.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/login2.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/identify.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/identify.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/router/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/downloadPrompt.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/downloadPrompt.vue" afterDir="false" />
-    </list>
+    <list default="true" id="324dc448-52a7-4c08-838e-425ed75cec50" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -73,15 +63,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="forgetpsd.vue" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/views/forgetpsd.vue">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="36">
-              <caret line="167" column="8" selection-start-line="167" selection-start-column="8" selection-end-line="167" selection-end-column="8" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="index.vue" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/views/index.vue">
           <provider selected="true" editor-type-id="text-editor" />
@@ -99,7 +80,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="login2.vue" pinned="false" current-in-tab="true">
+      <file leaf-file-name="login2.vue" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/views/login2.vue">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="144">
@@ -115,8 +96,17 @@
       <file leaf-file-name="downloadPrompt.vue" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/views/downloadPrompt.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret line="81" column="26" selection-start-line="81" selection-start-column="26" selection-end-line="81" selection-end-column="26" />
+            <state relative-caret-position="205">
+              <caret line="48" column="18" selection-start-line="48" selection-start-column="18" selection-end-line="48" selection-end-column="18" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="server.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/server.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="324">
+              <caret line="9" column="16" lean-forward="true" selection-start-line="9" selection-start-column="16" selection-end-line="9" selection-end-column="16" />
             </state>
           </provider>
         </entry>
@@ -213,9 +203,9 @@
       <path value="$PROJECT_DIR$/package.json" />
     </packageJsonPaths>
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
-    <option name="x" value="-17" />
-    <option name="y" value="143" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="57" />
+    <option name="y" value="-12" />
     <option name="width" value="1894" />
     <option name="height" value="855" />
   </component>
@@ -232,6 +222,11 @@
             <path>
               <item name="maya" type="b2602c69:ProjectViewProjectNode" />
               <item name="maya" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="maya" type="b2602c69:ProjectViewProjectNode" />
+              <item name="maya" type="462c0819:PsiDirectoryNode" />
+              <item name="dist" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="maya" type="b2602c69:ProjectViewProjectNode" />
@@ -345,21 +340,21 @@
       <workItem from="1527210573815" duration="776000" />
       <workItem from="1527495626327" duration="3319000" />
       <workItem from="1528083574515" duration="57000" />
-      <workItem from="1528178139219" duration="23554000" />
+      <workItem from="1528178139219" duration="24326000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="161729000" />
+    <option name="totallyTimeSpent" value="162501000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="44" y="521" width="1894" height="855" extended-state="0" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14270501" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.13958333" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50052685" side_tool="true" visible="true" weight="0.2671141" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50052685" side_tool="true" visible="true" weight="0.21035941" />
       <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Run" order="2" />
@@ -629,13 +624,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/dist/static/js/0.ffebb6ea0d5ed2902390.js" />
     <entry file="file://$PROJECT_DIR$/dist/static/js/2.cdec039852b2773ccbde.js" />
-    <entry file="file://$PROJECT_DIR$/server.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="30" selection-start-column="23" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="396">
@@ -710,13 +698,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/views/downloadPrompt.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="81" column="26" selection-start-line="81" selection-start-column="26" selection-end-line="81" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/api/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -745,6 +726,20 @@
             <element signature="e#1358#1404#0" expanded="true" />
             <element signature="e#1565#1601#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/downloadPrompt.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="205">
+          <caret line="48" column="18" selection-start-line="48" selection-start-column="18" selection-end-line="48" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="9" column="16" lean-forward="true" selection-start-line="9" selection-start-column="16" selection-end-line="9" selection-end-column="16" />
         </state>
       </provider>
     </entry>
