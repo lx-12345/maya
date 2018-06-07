@@ -31,20 +31,33 @@
 </template>
 
 <script>
-//	import QRCode from '../../common/js/qrcode.js'
+  //	import QRCode from '../../common/js/qrcode.js'
+  import Sidentify from '../components/identify'
+  import { Toast } from 'mint-ui' // 提示框
+  import axios from '../utils/request'
+  import api from '../api/index.js'
+  import CryptoJS from 'crypto-js/crypto-js'
+  import { encryption } from '../utils/my-crypto-js'
+  // import AES from 'crypto-js/aes'
+  import md5 from 'crypto-js/md5'
 	import QRCode from '../utils/qrcode'
-	export default {
-		data(){
-			return{
-				text:'www.baidu.com',
-				text2:'56663159'
-			}
-		},
-	   mounted() {
-        this.qrcode(qrcode,this.text)
-        this.qrcode(qrcode2,this.text2)
+  export default {
+    data(){
+      return{
+        text:'www.baidu.com',
+        text2:'56663159'
+      }
     },
-
+    mounted () {
+      // 读取
+      let str = sessionStorage.obg;
+      // 重新转换为对象
+      let obj = JSON.parse(str);
+      //console.log(obj)
+      this.qrcode(qrcode,obj.androidUrl)
+      this.qrcode(qrcode2,obj.iosUrl)
+     // this.code()
+    },
     methods: {
       qrcode (obg,text) {
 	      let qrcode = new QRCode(obg, {
@@ -55,9 +68,8 @@
 	        // background: '#f0f'
 	        // foreground: '#ff0'
 	      })
-	      console.log(qrcode)
+	      //console.log(qrcode)
 		  }
-
     }
 	}
 </script>

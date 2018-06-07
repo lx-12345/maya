@@ -55,7 +55,7 @@
           mobilePhone: '',
           GraphicCode: '', //  图型验证码
           verifyCode: '',
-          invitedCode: '',
+          invitedCode: 'n3kaXP',
           loginPassword: '',
           loginPassword2: '',
           timeStamp: '2018-01-25 12:32:21',
@@ -73,9 +73,40 @@
       mounted () {
         this.identifyCode = ''
         this.makeCode(this.identifyCodes, 4)// 图片验证码
+        this.GetRequest()
+        // console.log(this.GetRequest())
+        // 获取url里本地缓存的邀请码
+        let invitedCodes = sessionStorage.getItem('invitedCode')
+        console.log(invitedCodes)
+        this.invitedCode = invitedCodes
+        console.log(this.verifyCode)
+        // 获取当前页面的路径
+        var url = window.location.href;
+        if(url.indexOf("?") != -1){
+          url = url.split("?")[0];
+          console.log(url);
+        }
       },
       methods: {
-        vGraphicCode() {
+        GetRequest () {
+          var url = location.search  // 获取url中"?"符后的字串
+          var theRequest = new Object()
+          if (url.indexOf('?') != -1) {
+            var str = url.substr(1)
+            let strs = str.split('&')
+            for (var i = 0; i < strs.length; i ++) {
+              theRequest[strs[i].split('=')[0]] = unescape(strs[i].split('=')[1])
+            }
+          }
+          if (theRequest.invitedCode && theRequest.invitedCode !== '' && theRequest.invitedCode !== undefined) {
+             console.log(theRequest.invitedCode)
+            // 把url 里的邀请码存到本地
+            sessionStorage.setItem('invitedCode', theRequest.invitedCode )
+          }else{
+            sessionStorage.setItem('invitedCode', '' )
+          }
+        },
+        vGraphicCode () {
           this.Flag = true
           if (!this.GraphicCode) {
             this.Flag = false
@@ -140,8 +171,8 @@
                 this.Flags = true;
                 this.values = 60
               }
+              clearInterval(this.timer);
             }, 1000)
-            clearInterval(this.timer);
             let mobilePhone = this.mobilePhone
             let str = mobilePhone.replace(/\s+/g, '')
             let type = '1'
@@ -162,7 +193,8 @@
             let md5Data = md5(mdata)
             // 参数拼接
             let MAdata = datas + '&' + 'sign=' + md5Data
-            axios.post(api.msg, MAdata)
+            let thisUrl = url + api.msg
+            axios.post(thisUrl, MAdata)
               .then(res => {
                 if (res.data.result_code === '200'){
                   Toast({
@@ -255,7 +287,7 @@
           let mobilePhoneStr = mobilePhone.replace(/\s+/g, '')
           let loginPasswordStr = loginPassword.replace(/\s+/g, '')
           let verifyCodeStr = verifyCode.replace(/\s+/g, '')
-          console.log(mobilePhoneStr)
+          console.log(this.verifyCode)
           let data = {
             mobilePhone: mobilePhoneStr,
             loginPassword: loginPasswordStr,
@@ -264,32 +296,6 @@
             registeType: registeTypes,
             registeSource: ''
           }
-          // 本地缓存
-          sessionStorage.setItem('invitedCode', this.invitedCode)
-          // if (!this.mobilePhone) { // 手机号码验证
-          //   Toast('请输手机号')
-          // } else if (!reg.test(this.mobilePhone)) {
-          //   Toast('请输入正确的手机号')
-          // }
-          // if (!this.GraphicCode) {
-          //   Toast('请输入图形码')
-          // } else if (this.GraphicCode != this.identifyCode) {
-          //   Toast('图形验证码不正确')
-          // }
-          // if (!this.verifyCode) {
-          //   Toast('请填写手机验证码')
-          // }
-          // if (!this.loginPassword){
-          //   Toast('请输入密码')
-          // } else if (!pattern.test(this.loginPassword)){
-          //   Toast('请输入6-18位字母＋数字组合')
-          // }
-          // if (!this.loginPassword2) {
-          //   Toast('请确认密码')
-          // } else if (this.loginPassword != this.loginPassword2) {
-          //   Toast('两次密码不一致')
-          //   this.loginPassword2 = ''
-          // }
           // aes加密
           let phoneDatas = encryption(JSON.stringify(data));
           // console.log(phoneDatas.toString());
@@ -303,10 +309,11 @@
           // 参数拼接
           let MAdata = datas + '&' + 'sign=' + md5Data
         //  axios
-          axios.post(api.register, MAdata)
+          let thisUrl = url + api.registerForH5
+          axios.post(thisUrl, MAdata)
             .then(res => {
-              console.log(res.data)
               if (res.data.result_code === '200') {
+                console.log(res.data)
                 Toast({
                   showClose: true,
                   message: res.data.result_info,
@@ -315,23 +322,14 @@
                 window.location.href = '/downloadPrompt'
                 // 本地缓存
                 let obj = {
-                  'token': res.data.token ,
-                  'timeStamp': res.data.timeStamp ,
-                  'version': res.data.version ,
-                  'userId': res.data.userId ,
-                  'invitedCode': res.data.invitdCode ,
-                  'level': res.data.level ,
-                  'isBindCard': res.data.isBindCard ,
-                  'isSetTradePassword': res.data.isSetTradePassword ,
-                  'bankCardNo': res.data.bankCardNo,
-                  'isExitValidateAddress': res.data.isExitValidateAddress
+                  'mobile': res.data.data.mobile,
+                  'userId': res.data.data.userId,
+                  'androidUrl': res.data.data.androidUrl,
+                  'iosUrl': res.data.data.iosUrl
                 }
                 let str = JSON.stringify(obj)// parse 转字符串
                 sessionStorage.obg = str
-                // window.location.href = 'https://www.baidu.com'
-//              router.push({name: 'Login'})
               } else {
-                console.log(res.data.result_info)
                   Toast({
                     showClose: true,
                     message: res.data.result_info,
