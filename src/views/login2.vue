@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div id="app">
       <div class="banner">
         <img src="../assets/image/login-bg.jpg" alt="">
       </div>

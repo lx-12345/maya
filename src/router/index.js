@@ -11,10 +11,10 @@ const DownloadPrompt = resolve => require(['../views/downloadPrompt.vue'], resol
 const login2 = resolve => require(['../views/login2.vue'], resolve)
 
 export default new Router({
-  mode: 'history',
+  // mode: 'history',
   routes: [
     {
-      path: '/index',
+      path: '/',
       name: 'index',
       component: Index
     },
@@ -44,7 +44,7 @@ export default new Router({
       component: DownloadPrompt
     },
     {
-      path: '/',
+      path: '/login2',
       name: 'login2',
       component: login2
     }
