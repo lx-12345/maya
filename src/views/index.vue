@@ -18,7 +18,7 @@
           <input class="btnSendCode"  type="button" v-show="show" :value="values+' '+ 's'">
         </li>
         <li>
-          <input type="text" v-model="invitedCode" placeholder="|请输入邀请码">
+          <input type="text" v-model="inviteCode" placeholder="|请输入邀请码">
         </li>
         <li><input type="text" v-model="loginPassword" @blur="vloginPassword" placeholder="|请输入您的密码"> </li>
         <li><input type="text" v-model="loginPassword2" @blur="vloginPassword2" placeholder="|请确认您的密码"> </li>
@@ -55,7 +55,7 @@
         mobilePhone: '',
         GraphicCode: '', //  图型验证码
         verifyCode: '',
-        invitedCode: 'n3kaXP',
+        inviteCode: 'n3kaXP',
         loginPassword: '',
         loginPassword2: '',
         timeStamp: '2018-01-25 12:32:21',
@@ -74,23 +74,21 @@
       this.identifyCode = ''
       this.makeCode(this.identifyCodes, 4)// 图片验证码
       this.GetRequest()
-      // console.log(this.GetRequest())
       // 获取url里本地缓存的邀请码
-      let invitedCodes = sessionStorage.getItem('invitedCode')
-      console.log(invitedCodes)
-      this.invitedCode = invitedCodes
-      console.log(this.verifyCode)
+      let inviteCodes = sessionStorage.getItem('inviteCode')
+      //console.log(inviteCodes)
+      this.inviteCode = inviteCodes
+      //console.log(this.verifyCode)
       // 获取当前页面的路径
       // var url = window.location.href;
       // if(url.indexOf("?") != -1){
       //   url = url.split("/a")[0];
       //   console.log(url);
       // }
-      const url = window.location.host
     },
     methods: {
       GetRequest () {
-        var url = location.search  // 获取url中"?"符后的字串
+        var url = window.location.search  // 获取url中"?"符后的字串
         var theRequest = new Object()
         if (url.indexOf('?') != -1) {
           var str = url.substr(1)
@@ -99,12 +97,12 @@
             theRequest[strs[i].split('=')[0]] = unescape(strs[i].split('=')[1])
           }
         }
-        if (theRequest.invitedCode && theRequest.invitedCode !== '' && theRequest.invitedCode !== undefined) {
-          console.log(theRequest.invitedCode)
+        if (theRequest.inviteCode && theRequest.inviteCode !== '' && theRequest.inviteCode !== undefined) {
           // 把url 里的邀请码存到本地
-          sessionStorage.setItem('invitedCode', theRequest.invitedCode )
-        }else{
-          sessionStorage.setItem('invitedCode', 'sss' )
+          sessionStorage.setItem('inviteCode', theRequest.inviteCode)
+        }else {
+          sessionStorage.setItem('inviteCode', '')
+
         }
       },
       vGraphicCode () {
@@ -194,9 +192,10 @@
           let md5Data = md5(mdata)
           // 参数拼接
           let MAdata = datas + '&' + 'sign=' + md5Data
-          console.log(url);
-          let thisUrl = url + api.msg
-          axios.post(api.msg, MAdata)
+          let url = location.host
+          const thisUrl = window.location.protocol+'//' + url + api.msgs
+          //console.log(thisUrl)
+          axios.post(thisUrl, MAdata)
             .then(res => {
               if (res.data.result_code === '200'){
                 Toast({
@@ -289,12 +288,12 @@
         let mobilePhoneStr = mobilePhone.replace(/\s+/g, '')
         let loginPasswordStr = loginPassword.replace(/\s+/g, '')
         let verifyCodeStr = verifyCode.replace(/\s+/g, '')
-        console.log(this.verifyCode)
+        // console.log(this.verifyCode)
         let data = {
           mobilePhone: mobilePhoneStr,
           loginPassword: loginPasswordStr,
           verifyCode: verifyCodeStr,
-          invitedCode: this.invitedCode,
+          invitedCode: this.inviteCode,
           registeType: registeTypes,
           registeSource: ''
         }
@@ -311,8 +310,10 @@
         // 参数拼接
         let MAdata = datas + '&' + 'sign=' + md5Data
         //  axios
-       // let thisUrl = url + api.registerForH5
-        axios.post(api.registerForH5, MAdata)
+        let url = location.host
+        const thisUrls = window.location.protocol+'//'+ url + api.registerForH5
+       //console.log(thisUrls)
+        axios.post(thisUrls, MAdata)
           .then(res => {
             if (res.data.result_code === '200') {
               console.log(res.data)
@@ -418,6 +419,7 @@
   .code{
     position: absolute;
     right: 11px;
-    top: -24px;
+    top: -33px;
+    height: 34px;
   }
 </style>

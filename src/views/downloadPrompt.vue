@@ -10,21 +10,21 @@
           <!--<img src="../assets/image/code.png" alt="">-->
         </div>
         <p>手机扫描二维码下载</p>
-        <img height="16px" src="../assets/image/Android.png" alt="">
+        <!--<img height="16px" src="../assets/image/Android.png" alt="">-->
         <div class="btn">
           <button>下载</button>
         </div>
       </div>
-      <div class="IOS-code">
-        <div class="QR-code-icon" id="qrcode2">
-          <!--<img src="../assets/image/code.png" alt="">-->
-        </div>
-        <p>手机扫描二维码下载</p>
-        <img height="16px" src="../assets/image/IOS.png" alt="">
-        <div class="btn">
-          <button>下载</button>
-        </div>
-      </div>
+      <!--<div class="IOS-code">-->
+        <!--<div class="QR-code-icon" id="qrcode2">-->
+          <!--&lt;!&ndash;<img src="../assets/image/code.png" alt="">&ndash;&gt;-->
+        <!--</div>-->
+        <!--<p>手机扫描二维码下载</p>-->
+        <!--<img height="16px" src="../assets/image/IOS.png" alt="">-->
+        <!--<div class="btn">-->
+          <!--<button>下载</button>-->
+        <!--</div>-->
+      <!--</div>-->
     </div>
     <div class="text-maya">全球首个消费4.0的移动互联网商城</div>
   </div>
@@ -49,25 +49,29 @@
       }
     },
     mounted () {
-      // 读取
-      let str = sessionStorage.obg;
-      // 重新转换为对象
-      let obj = JSON.parse(str);
-      //console.log(obj)
-      this.qrcode(qrcode,obj.androidUrl)
-      this.qrcode(qrcode2,obj.iosUrl)
-     // this.code()
+      let obj = {
+        'androidUrl':'dfdfdfdd',
+        'iosUrl': '123355666'
+      }
+      let str = JSON.stringify(obj)// parse 转字符串
+      sessionStorage.obg = str
+      let code = 'https://fir.im/mayamall'
+      this.qrcode(qrcode,code)
     },
     methods: {
       qrcode (obg,text) {
 	      let qrcode = new QRCode(obg, {
-	        width: 100,
-	        height: 100, // 高度
+	        width: 150,
+	        height: 150, // 高度
 	        text: text // 二维码内容
 	        // render: 'canvas' // 设置渲染方式（有两种方式 table和canvas，默认是canvas）
 	        // background: '#f0f'
 	        // foreground: '#ff0'
 	      })
+        // 读取
+        let str = sessionStorage.obg;
+        // 重新转换为对象
+        let obj = JSON.parse(str);
 	      //console.log(qrcode)
 		  }
     }

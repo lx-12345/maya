@@ -80,8 +80,8 @@
         ctx.fillStyle = this.randomColor(this.backgroundColorMin, this.backgroundColorMax)
         ctx.fillRect(0, 0, this.contentWidth, this.contentHeight)
         // 绘制边框
-        ctx.strokeStyle= "#f88125";
-        ctx.lineWidth=2;
+        ctx.strokeStyle = '#f88125';
+        ctx.lineWidth = 2;
         ctx.rect(0, 0, 80, 34);
         ctx.stroke();
         // 绘制文字
