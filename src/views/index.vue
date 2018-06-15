@@ -20,19 +20,19 @@
         <li>
           <input type="text" v-model="inviteCode" placeholder="|请输入邀请码">
         </li>
-        <li><input type="text" v-model="loginPassword" @blur="vloginPassword" placeholder="|请输入您的密码"> </li>
-        <li><input type="text" v-model="loginPassword2" @blur="vloginPassword2" placeholder="|请确认您的密码"> </li>
+        <li><input type="password" v-model="loginPassword" @blur="vloginPassword" placeholder="|请输入您的密码"> </li>
+        <li><input type="password" v-model="loginPassword2" @blur="vloginPassword2" placeholder="|请确认您的密码"> </li>
         <li><input type="button"  @click="MayaRegister" value="立即注册"> </li>
       </ul>
     </div>
-    <div class="explain">
-      <h3>规则说明</h3>
-      <p>1、注册成为妈呀商城消费投资人送60 MAYA。</p>
-      <p>2、推荐他人成为妈呀商城消费投资人的30 MAYA。</p>
-      <p>3、每位消费投资人必须实名认证才可提取数字货币。</p>
-      <p>4、送区块链数字货币。</p>
-      <p class="foot-bottom">5、其他未尽事宜，详情咨询客服。</p>
-    </div>
+    <!--<div class="explain">-->
+      <!--<h3>规则说明</h3>-->
+      <!--<p>1、注册成为妈呀商城消费投资人送60 MAYA。</p>-->
+      <!--<p>2、推荐他人成为妈呀商城消费投资人的30 MAYA。</p>-->
+      <!--<p>3、每位消费投资人必须实名认证才可提取数字货币。</p>-->
+      <!--<p>4、送区块链数字货币。</p>-->
+      <!--<p class="foot-bottom">5、其他未尽事宜，详情咨询客服。</p>-->
+    <!--</div>-->
     <div class="footer"><img src="../assets/image/footer-bg.jpg" alt=""></div>
   </div>
 </template>
@@ -194,6 +194,7 @@
           let MAdata = datas + '&' + 'sign=' + md5Data
           let url = location.host
           const thisUrl = window.location.protocol+'//' + url + api.msgs
+//					const thisUrl='https://192.168.0.205:8088/siteuser/v1/send_msg'
           //console.log(thisUrl)
           axios.post(thisUrl, MAdata)
             .then(res => {
@@ -322,7 +323,7 @@
                 message: res.data.result_info,
                 type: 'success'
               })
-              window.location.href = '/downloadPrompt'
+              window.location.href = '#/downloadPrompt'
               // 本地缓存
               let obj = {
                 'mobile': res.data.data.mobile,
@@ -416,10 +417,10 @@
     border-bottom-left-radius: 0 !important;
     border-top-left-radius: 0 !important;
   }
-  .code{
-    position: absolute;
-    right: 11px;
-    top: -33px;
-    height: 34px;
-  }
+  /*.code{*/
+    /*position: absolute;*/
+    /*right: 11px;*/
+    /*top: 10px;*/
+    /*height: 34px;*/
+  /*}*/
 </style>

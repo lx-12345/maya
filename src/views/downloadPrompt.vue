@@ -7,12 +7,12 @@
     <div class="QR-code">
       <div class="Android-code">
         <div class="QR-code-icon" id="qrcode">
-          <!--<img src="../assets/image/code.png" alt="">-->
+          <!--<img src="../assets/image/qrcode_1528453010.png" alt="">-->
         </div>
         <p>手机扫描二维码下载</p>
-        <!--<img height="16px" src="../assets/image/Android.png" alt="">-->
+        <img height="16px" src="../assets/image/Android.png" alt="">
         <div class="btn">
-          <button>下载</button>
+          <button @click="az()">下载</button>
         </div>
       </div>
       <!--<div class="IOS-code">-->
@@ -22,10 +22,14 @@
         <!--<p>手机扫描二维码下载</p>-->
         <!--<img height="16px" src="../assets/image/IOS.png" alt="">-->
         <!--<div class="btn">-->
-          <!--<button>下载</button>-->
+          <!--<button @click="ios()">下载</button>-->
         <!--</div>-->
       <!--</div>-->
     </div>
+
+    <!--<div class="btn">-->
+      <!--<button @click="ios()">IOS下载</button>-->
+    <!--</div>-->
     <div class="text-maya">全球首个消费4.0的移动互联网商城</div>
   </div>
 </template>
@@ -49,36 +53,65 @@
       }
     },
     mounted () {
-      let obj = {
-        'androidUrl':'dfdfdfdd',
-        'iosUrl': '123355666'
-      }
-      let str = JSON.stringify(obj)// parse 转字符串
-      sessionStorage.obg = str
-      let code = 'https://fir.im/mayamall'
-      this.qrcode(qrcode,code)
+      // let obj = {
+      //   'androidUrl':'dfdfdfdd',
+      //   'iosUrl': '123355666'
+      // }
+      // let str = JSON.stringify(obj)// parse 转字符串
+      // sessionStorage.obg = str
+      // let code = 'https://fir.im/mayamall'
+      let text = 'https://maya.shop/activity/index.html#/codeUrl'
+      // let text2 = 'https://fir.im/mayamall'// ios
+      this.qrcode(qrcode,text)
+      // this.qrcode2(qrcode2,text2)
     },
-    methods: {
-      qrcode (obg,text) {
-	      let qrcode = new QRCode(obg, {
-	        width: 150,
-	        height: 150, // 高度
-	        text: text // 二维码内容
-	        // render: 'canvas' // 设置渲染方式（有两种方式 table和canvas，默认是canvas）
-	        // background: '#f0f'
-	        // foreground: '#ff0'
-	      })
+    methods: { // https://maya.shop/activity/index.html#/codeUrl
+      qrcode (obg , text) {
+         let qrcode = new QRCode(obg, {
+           width: 120,
+           height: 120, // 高度
+           text: text // 二维码内容
+           // render: 'canvas' // 设置渲染方式（有两种方式 table和canvas，默认是canvas）
+           // background: '#f0f'
+           // foreground: '#ff0'
+         })
         // 读取
-        let str = sessionStorage.obg;
+        // let str = sessionStorage.obg;
         // 重新转换为对象
-        let obj = JSON.parse(str);
-	      //console.log(qrcode)
-		  }
+        // let obj = JSON.parse(str);
+         //console.log(qrcode)
+      },
+      // qrcode2 (obg , text2) {
+      //   let qrcode2 = new QRCode(obg, {
+      //     width: 120,
+      //     height: 120, // 高度
+      //     text: text2 // 二维码内容
+      //     // render: 'canvas' // 设置渲染方式（有两种方式 table和canvas，默认是canvas）
+      //     // background: '#f0f'
+      //     // foreground: '#ff0'
+      //   })
+      //   // 读取
+      //   // let str = sessionStorage.obg;
+      //   // 重新转换为对象
+      //   // let obj = JSON.parse(str);
+      //   //console.log(qrcode)
+      // },
+      // 下载按钮
+      az () {
+        window.location.href = 'http://maya.shop/images/appversion/maya1.0.apk'
+      },
+      ios () {
+        // window.location.href = '尽请期待'
+        alert('尽请期待')
+      }
     }
 	}
 </script>
 
 <style scoped>
+  body,html{
+    height: 100%;
+  }
   .maya-bg{
     width: 100vw;
     height: 100vh;
@@ -88,43 +121,55 @@
   }
   .maya-logo{
     text-align: center;
-    padding-top: 25%;
+    padding-top: 15%;
   }
   .QR-code{
-    margin: 18% 20px 15% 20px;
+    margin: 10% 20px 10% 20px;
     display: flex;
     justify-content: space-around;
+  }
+  .Android-code{
+    /*width: 50%;*/
+    padding: 15px 15px 0 15px;
+    text-align: center;
   }
   .Android-code,.IOS-code{
     background-color: #fff;
     border-radius: 5px;
+    text-align: center;
+    padding: 15px 15px 0;
   }
-  .Android-code>img,.IOS-code>img{
+  .Android-code .QR-code-icon >img,.IOS-code .QR-code-icon>img{
     display: block;
     margin: 0 auto;
-    margin-bottom: 15px;
+    margin: 15px 0;
+    width: 100% !important;
   }
   .Android-code>p,.IOS-code>p{
     text-align: center;
     font-size: small;
-    margin-bottom: 15px;
+    margin-top: 15px;
   }
   .Android-code .QR-code-icon,.IOS-code .QR-code-icon{
-    margin: 20px;
+    /*margin: 20px;*/
   }
   .Android-code .QR-code-icon img,.IOS-code .QR-code-icon img{
     width: 100%;
   }
-  .Android-code .btn,.IOS-code .btn{
-   margin: 20px 10px;
-    font-size: medium;
+ .btn{
+   margin: 0 auto;
+   font-size: medium;
+   margin-bottom: 15px;
+   width: 100%;
   }
-  .Android-code .btn button,.IOS-code .btn button{
+  .btn button{
     width: 100%;
-    height: 36px;
+    height: 30px;
     line-height: 30px;
     border-radius: 5px;
-    background-color: #24aa37;
+    background-image: url("../assets/image/code_bg.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
     border: none;
     outline: none;
     color: #fff;
@@ -137,8 +182,11 @@
     font-size: 16px;
     text-align: center;
     color: #f6ae0c;
-    position: fixed;
+    /*position: fixed;*/
     width: 100%;
-    bottom: 10%;
+    /*bottom: 5%;*/
+  }
+  #qrcode2>img,#qrcode>img{
+    width: 100%;
   }
 </style>
