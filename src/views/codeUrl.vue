@@ -22,7 +22,7 @@
         }
         // 这里是iOS浏览器
         if (isIOS) {
-          window.location.href = 'https://fir.im/mayamall'; // 跳AppStore下载地址
+          window.location.href = 'https://itunes.apple.com/cn/app/%E5%A6%88%E5%91%80%E5%95%86%E5%9F%8E/id1394347313?mt=8'; // 跳AppStore下载地址
         }
 
         // 是微信内部webView
@@ -32,7 +32,7 @@
 
         // 是PC端
         if (IsPC()) {
-          window.location.href = 'http://www.xxxxxxx.cn/index.html';  // 公司主页
+          window.location.href = 'http://maya.shop';  // 公司主页
         }
       }
 

@@ -10,10 +10,11 @@
           <!--<img src="../assets/image/qrcode_1528453010.png" alt="">-->
         </div>
         <p>手机扫描二维码下载</p>
-        <img height="16px" src="../assets/image/Android.png" alt="">
-        <div class="btn">
-          <button @click="az()">下载</button>
-        </div>
+        <!--<img height="16px" src="../assets/image/Android.png" alt="">-->
+        <!--<div class="btn">
+          <button @click="az()">安卓下载</button>
+          <button @click="ios()">IOS下载</button>
+        </div>-->
       </div>
       <!--<div class="IOS-code">-->
         <!--<div class="QR-code-icon" id="qrcode2">-->
@@ -26,10 +27,12 @@
         <!--</div>-->
       <!--</div>-->
     </div>
-
-    <!--<div class="btn">-->
-      <!--<button @click="ios()">IOS下载</button>-->
-    <!--</div>-->
+		<div class="btn" @click="az()">
+      <button>安卓下载</button>
+    </div>
+    <div class="btn" @click="ios()">
+      <button>IOS下载</button>
+    </div>
     <div class="text-maya">全球首个消费4.0的移动互联网商城</div>
   </div>
 </template>
@@ -81,28 +84,12 @@
         // let obj = JSON.parse(str);
          //console.log(qrcode)
       },
-      // qrcode2 (obg , text2) {
-      //   let qrcode2 = new QRCode(obg, {
-      //     width: 120,
-      //     height: 120, // 高度
-      //     text: text2 // 二维码内容
-      //     // render: 'canvas' // 设置渲染方式（有两种方式 table和canvas，默认是canvas）
-      //     // background: '#f0f'
-      //     // foreground: '#ff0'
-      //   })
-      //   // 读取
-      //   // let str = sessionStorage.obg;
-      //   // 重新转换为对象
-      //   // let obj = JSON.parse(str);
-      //   //console.log(qrcode)
-      // },
       // 下载按钮
       az () {
         window.location.href = 'http://maya.shop/images/appversion/maya1.0.apk'
       },
       ios () {
-        // window.location.href = '尽请期待'
-        alert('尽请期待')
+        window.location.href = 'https://itunes.apple.com/cn/app/%E5%A6%88%E5%91%80%E5%95%86%E5%9F%8E/id1394347313?mt=8'
       }
     }
 	}
@@ -149,6 +136,7 @@
     text-align: center;
     font-size: small;
     margin-top: 15px;
+    padding-bottom: 20px;
   }
   .Android-code .QR-code-icon,.IOS-code .QR-code-icon{
     /*margin: 20px;*/
@@ -160,7 +148,7 @@
    margin: 0 auto;
    font-size: medium;
    margin-bottom: 15px;
-   width: 100%;
+   width: 42%;
   }
   .btn button{
     width: 100%;
